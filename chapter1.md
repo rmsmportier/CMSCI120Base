@@ -72,7 +72,7 @@ print("Hello Python!!!  How’s it going?")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-Ex().test_output_contains("Hello Python!!!  How\’s it going?", pattern=True, no_output_msg = "Take a look at the instructions and try again")
+test_output_contains("Hello Python!!!  How\’s it going?", pattern=True, no_output_msg = "Take a look at the instructions and try again")
 
 success_msg("Nice job!  When asking Python to print a string, we need to be sure to include appropriate string delimiters and use print with ()")
 
@@ -117,7 +117,7 @@ print("Not too bad")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-Ex().test_output_contains("Not too bad", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+test_output_contains("Not too bad", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
 success_msg("You are getting the hang of this!  Another string that needed delimiters and print with ().  *Not* is a token Python recognizes, so it was expecting instructions that matched with *Not*.  This is why the cursor was placed under *too*.")
 
@@ -158,7 +158,7 @@ print("Now what?")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-Ex().test_output_contains("Now what?", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+test_output_contains("Now what?", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
 success_msg("Nice!  NameError means Python attempted to look up a phrase we provided and was unable to find a match.  When we are giving instructions, this often means our instruction 'token' does not match one Python knows.  This is a runtime error because Python does not match tokens until attempting to run after no syntax errors exist.")
 
@@ -198,7 +198,7 @@ print("Will it work this time?")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-Ex().test_output_contains("Will it work this time?", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+test_output_contains("Will it work this time?", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
 success_msg("Good job!  EOF errors indicate Python went all the way to end of script (End of File) but could not find what it was looking for.  Often this proves to be a missing ) or mismatched pair ().  A similar EOL error indicates Python went to end of line but could not find what it was looking for.  Often this proves to be a missing or mismatched pair of quotes.")
 
