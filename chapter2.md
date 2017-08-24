@@ -700,7 +700,7 @@ print("This is an example " + "of string concatenation for " + str(4) + " string
 
 test_output_contains("This is an example of string concatenation for 4 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
-success_msg("Nice job; we needed to convert data type for integer 4 to string in order to use concatenation.")
+success_msg("Nice job; we needed to convert data type for *int* 4 to *str* in order to use concatenation.")
 
 ```
 
