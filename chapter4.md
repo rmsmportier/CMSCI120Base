@@ -9,7 +9,7 @@ description : CMSCI 120 Homework
 We can use the combination of expressions and the output building block to print designs to our screen.  Follow the instructions below.
 
 *** =instructions
-- Replace the ____ with "\*" in each open expression below.
+- Replace the ____ with "\*" in each open expression.
 
 *** =hint
 - Be sure to use "" around * to indicate that this is str data type
@@ -21,32 +21,32 @@ We can use the combination of expressions and the output building block to print
 *** =sample_code
 ```{python}
 # Print the first line of design
-print(____*19)
+print(____ * 19)
 
 # Print the second line of design
-print(____+' '*17+____)
+print(____ + ' ' * 17 + ____)
 
 # Print the third line of design
-print(____+' '*17+____)
+print(____ + ' ' * 17 + ____)
 
 # Print the fourth line of design
-print(____*19)
+print(____ * 19)
 
 ```
 
 *** =solution
 ```{python}
 # Print the first line of design
-print("*"*19)
+print("*" * 19)
 
 # Print the second line of design
-print("*"+' '*17+"*")
+print("*" + ' ' * 17 + "*")
 
 # Print the third line of design
-print("*"+' '*17+"*")
+print("*" + ' ' * 17 + "*")
 
 # Print the fourth line of design
-print("*"*19)
+print("*" * 19)
 
 ```
 
@@ -100,16 +100,16 @@ a ____ ____
 b ____ ____
 
 # Print the first line of design
-print(a*b)
+print(a * b)
 
 # Print the second line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the third line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the fourth line of design
-print(a*b)
+print(a * b)
 
 ```
 
@@ -122,16 +122,16 @@ a = "*"
 b = 19
 
 # Print the first line of design
-print(a*b)
+print(a * b)
 
 # Print the second line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the third line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the fourth line of design
-print(a*b)
+print(a * b)
 
 ```
 
@@ -193,16 +193,16 @@ a ____ ____
 b ____ ____
 
 # Print the first line of design
-print(a*b)
+print(a * b)
 
 # Print the second line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the third line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the fourth line of design
-print(a*b)
+print(a * b)
 
 ```
 
@@ -215,16 +215,16 @@ a = "$"
 b = 37
 
 # Print the first line of design
-print(a*b)
+print(a * b)
 
 # Print the second line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the third line of design
-print(a+' '*(b-2)+a)
+print(a + ' ' * (b-2) + a)
 
 # Print the fourth line of design
-print(a*b)
+print(a * b)
 
 ```
 
