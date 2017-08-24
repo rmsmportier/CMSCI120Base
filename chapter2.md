@@ -713,7 +713,9 @@ Notice the string entered in script on right.  Try running in the iPython shell 
 Think about the type of error message you received.
 
 *** =instructions
-- Fix the error
+- You are asked to write a program to sum the numbers from 10 to 20, take the average of those numbers, multiply the average by 3.2, add to 1000, and print the integer remainder when divided by 100.  
+- The following script was created, but provides the wrong result.  
+- Fix the problem with the script.
 - Press Submit Answer
 
 *** =hint
@@ -726,26 +728,41 @@ Think about the type of error message you received.
 
 *** =sample_code
 ```{python}
-# Correct the syntax error below
-n = input("Enter a number between 1 and 10: ")
-n = n + 2
-
+# Correct the error below
+totl = 10 + 12 + 13 + 13 + 14 + 15 + 16 + 18 + 19 + 20
+avg = totl/10
+n = avg * 3.2 + 10
+n = n//100
+print(n)
 ```
 
 *** =solution
 ```{python}
 # Correct the syntax error below
-n = input("Enter a number between 1 and 10: ")
-n = int(n) + 2
+totl = 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20
+avg = totl/11
+n = avg * 3.2 + 1000
+n = n%100
+print(n)
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("This is an example of string concatenation for 2 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+test_object("totl",
+            undefined_msg = "Don't remove the definition of variable *totl*.",
+            incorrect_msg = "Check your calculation for *totl* again.")
+            
+test_object("avg",
+            undefined_msg = "Don't remove the definition of variable *avg*.",
+            incorrect_msg = "Check your calculation for *avg* again.")
 
-success_msg("Nice job; we needed to convert data type for integer 2 to string in order to use concatenation.")
+test_object("n",
+            undefined_msg = "Don't remove the definition of variable *n*.",
+            incorrect_msg = "Check your calculation for *n* again.")
+
+success_msg("Good job! This was a semantic error because we missed entering 13.")
 
 ```
 
