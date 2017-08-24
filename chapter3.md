@@ -11,11 +11,11 @@ When learning any new programming language, one of the first programs is what is
 Complete instructions in the script.py to the right.
 
 *** =instructions
-- Complete the *print* statement with the phrase 'Hello World!'
+- Complete the *print* function with the phrase 'Hello World!'
 - Press Submit Answer
 
 *** =hint
-- Replace Hello World! for the blanks in the print statement
+- Replace Hello World! for the blanks in the print function
 - Be sure to keep the " ", and to include ! at end of the phrase
 
 *** =pre_exercise_code
@@ -59,7 +59,7 @@ Then use the *type()* function to validate your result.
 
 *** =instructions
 - Look at what has been assigned to variable *a* with =.  What data type is variable *a*?  Your choices are *float*, *int*, *str*.
-- Complete the *print* statement with the data type
+- Complete the *print* function with the data type
 - Complete the call to *type()* by placing the variable name *a* inside the parentheses.  This will tell us the true data type.
 - Press Submit Answer
 
@@ -131,7 +131,7 @@ Then use the *type()* function to validate your result.
 
 *** =instructions
 - Look at what has been assigned to variable *a* with =.  What data type is variable *a*?  Your choices are *float*, *int*, *str*.
-- Complete the *print* statement with the data type
+- Complete the *print* function with the data type
 - Complete the call to *type()* by placing the variable name *a* inside the parentheses.  This will tell us the true data type.
 - Press Submit Answer
 
@@ -203,7 +203,7 @@ Then use the *type()* function to validate your result.
 
 *** =instructions
 - Look at what has been assigned to variable *a* with =.  What data type is variable *a*?  Your choices are *float*, *int*, *str*.
-- Complete the *print* statement with the data type
+- Complete the *print* function with the data type
 - Complete the call to *type()* by placing the variable name *a* inside the parentheses.  This will tell us the true data type.
 - Press Submit Answer
 
