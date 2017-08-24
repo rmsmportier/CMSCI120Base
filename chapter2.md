@@ -675,8 +675,7 @@ Think about the type of error message you received.
 - Press Submit Answer
 
 *** =hint
-- With syntax errors, look for mismatched "", '', or ()
-- With runtime errors, look for mis-spelled words as Python needs exact match
+- When completing string concatenation, make sure all individual pieces are string type.
 
 *** =pre_exercise_code
 ```{python}
@@ -699,28 +698,26 @@ print("This is an example " + "of string concatenation for " + str(4) + " string
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("This is an example of string concatenation for 2 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+test_output_contains("This is an example of string concatenation for 4 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
-success_msg("Nice job; we needed to convert data type for integer 2 to string in order to use concatenation.")
+success_msg("Nice job; we needed to convert data type for integer 4 to string in order to use concatenation.")
 
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:2226242978
 ## Fix the Error (4)
 
-Notice the string entered in script on right.  Try running in the iPython shell by highlighting and pressing Ctrl-Enter:
+Notice the string entered in script on right.  You are asked to write a program to sum the numbers from 10 to 20, take the average of those numbers, multiply the average by 3.2, add to 1000, and print the integer remainder when divided by 100.  The script on the right was created, but provides the wrong result.  
 
-Think about the type of error message you received.
+Think about the requirements and the result.  Fix the error(s).
 
 *** =instructions
-- You are asked to write a program to sum the numbers from 10 to 20, take the average of those numbers, multiply the average by 3.2, add to 1000, and print the integer remainder when divided by 100.  
-- The following script was created, but provides the wrong result.  
 - Fix the problem with the script.
 - Press Submit Answer
 
 *** =hint
-- With syntax errors, look for mismatched "", '', or ()
-- With runtime errors, look for mis-spelled words as Python needs exact match
+- Check the instructions, consider what the individual steps are that are needed.  
+- Check each step one at a time for accuracy related to the calculation.
 
 *** =pre_exercise_code
 ```{python}
@@ -762,7 +759,11 @@ test_object("n",
             undefined_msg = "Don't remove the definition of variable *n*.",
             incorrect_msg = "Check your calculation for *n* again.")
 
-success_msg("Good job! This was a semantic error because we missed entering 13.")
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check your previous calculations to correct value for *n*.  Look at hint to help you identify.")
+            
+success_msg("Good job! This one involved several semantic errors.  You needed to fix each in order to achieve the right result.")
 
 ```
 
