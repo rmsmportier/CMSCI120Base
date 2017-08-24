@@ -427,6 +427,89 @@ success_msg('Excellent work!!  Let\'s try one more program.')
 ```
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:52e57952de
+## Combining Variables and Expressions (2)
+
+I have created 2 variables *width* and *height*.  You can use commands you have learned in the iPython shell to evaluate the current value of each of these variables.  Fill in the operator needed to produce the value specified for each of the following.
+
+*** =instructions
+- apply operator to the operands *width* and 4; result should be 4
+- apply operator to the operands *width* and 4; result should be 68
+- apply operator to the operands *height* and 2.5; result should be 4.8
+- apply operator to the operands *height* and 12; result should be 0.0
+- apply operators to the operands 10, 2, and 8; result should be 26
+
+*** =hint
+- Think about the operators we have learned, what the value and type of each operand is, and try to find an operator that produceses requested results.
+
+*** =pre_exercise_code
+```{python}
+width = 17
+height = 12.0
+```
+
+*** =sample_code
+```{python}
+# Produce result of 4
+print(width ____ 4)
+
+# Produce result of 68
+print(width ____ 4)
+
+# Produce result of 4.8
+print(height ____ 2.5)
+
+# Produce result of 0.0
+print(height ____ 12)
+
+# Produce result of 26
+print(10 ____ 2 ____ 8)
+
+```
+
+*** =solution
+```{python}
+# Produce result of 4
+print(width // 4)
+
+# Produce result of 68
+print(width * 4)
+
+# Produce result of 4.8
+print(height / 2.5)
+
+# Produce result of 0.0
+print(height - 12)
+
+# Produce result of 26
+print(10 + 2 * 8)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the first call to print?",
+            incorrect_msg = "Check the operator you specified for the first call to print.")
+            
+test_function("print", index=2,
+            not_called_msg = "Did you remove the second call to print?",
+            incorrect_msg = "Check the operator you specified for the first call to print.")
+            
+test_function("print", index=3,
+            not_called_msg = "Did you remove the third call to print?",
+            incorrect_msg = "Check the operator you specified for the first call to print.")
+            
+test_function("print", index=4,
+            not_called_msg = "Did you remove the fourth call to print?",
+            incorrect_msg = "Check the operator you specified for the first call to print.")
+            
+success_msg('Excellent work!!  You have mastered the expressions building block.')
+
+```
+
 --- type:NormalExercise lang:python xp:100 skills:1 key:fd2d31317f
 ## Combining Expressions and Building Blocks (2)
 
@@ -683,5 +766,6 @@ test_function("print", index=4,
 success_msg('Excellent work!!  You are now programming in Python, and have mastered 2 of the 6 building blocks.')
 
 ```
+
 
 
