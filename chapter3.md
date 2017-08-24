@@ -105,9 +105,12 @@ test_object("a",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
 
 test_function("print", index=1,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the first call to print?",
             incorrect_msg = "Check the data type you indicated in print statement.  Look at hint to help you identify.")
-            
+
+test_function("print", index=2,
+            not_called_msg = "Did you remove the second call to print?",
+            incorrect_msg = "Did you remove the second call to print?")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
@@ -176,9 +179,12 @@ test_object("a",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
 
 test_function("print", index=1,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the first call to print?",
             incorrect_msg = "Check the data type you indicated in print statement.  Look at hint to help you identify.")
-            
+
+test_function("print", index=2,
+            not_called_msg = "Did you remove the second call to print?",
+            incorrect_msg = "Did you remove the second call to print?")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
@@ -247,9 +253,12 @@ test_object("a",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
 
 test_function("print", index=1,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the first call to print?",
             incorrect_msg = "Check the data type you indicated in print statement.  Look at hint to help you identify.")
             
+test_function("print", index=2,
+            not_called_msg = "Did you remove the second call to print?",
+            incorrect_msg = "Did you remove the second call to print?")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
@@ -272,7 +281,7 @@ Use the correct arithmetic operator to complete the requested operation in the s
 
 *** =instructions
 - Add the value in *a* to the value in *b*
-- Subtract the value in *a* from the value in *b*
+- Subtract the value in *b* from the value in *a*
 - Multiply the value in *a* by the value in *b*
 - Use the modulus operator to find the remainder when we divide the value in *a* by the value in *b*
 
@@ -294,7 +303,7 @@ b = 432
 # Add the value in a to the value in b
 print(a ____ b)
 
-# Subtract the value in a from the value in b
+# Subtract the value in b from the value in a
 print(a ____ b)
 
 # Multiply the value in a by the value in b
@@ -316,7 +325,7 @@ b = 432
 # Add the value in a to the value in b
 print(a + b)
 
-# Subtract the value in a from the value in b
+# Subtract the value in b from the value in a
 print(a - b)
 
 # Multiply the value in a by the value in b
@@ -341,19 +350,19 @@ test_object("b",
             incorrect_msg = "Do not remove assignment statement for variable *b*.")
 
 test_function("print", index=1,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the first call to print?",
             incorrect_msg = "Check the operator you used to *add* the two values.")
             
 test_function("print", index=2,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the second call to print?",
             incorrect_msg = "Check the operator you used to *subtract* the two values.")
 
 test_function("print", index=3,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the third call to print?",
             incorrect_msg = "Check the operator you used to *multiply* the two values.")
 
 test_function("print", index=4,
-            not_called_msg = "Did you remove the call to print?",
+            not_called_msg = "Did you remove the fourth call to print?",
             incorrect_msg = "Check the operator you used to find remainder when dividing the two values.  The operator is called a modulus.")
 
 success_msg('Excellent work!!  Let\'s keep going.')
@@ -362,7 +371,7 @@ success_msg('Excellent work!!  Let\'s keep going.')
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:c6599fdcf9
-## Combining Expressions and Building Blocks
+## Combining Expressions to Create Variables
 
 Combining expressions and building blocks is how we create programs.  Let's create a program that takes a value in feet and converts to inches, printing the result to the screen.  For this program, we need 2 building blocks: expressions and output.
 
@@ -428,7 +437,7 @@ success_msg('Excellent work!!  Let\'s try one more program.')
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:52e57952de
-## Combining Variables and Expressions (2)
+## Combining Variables and Expressions
 
 I have created 2 variables *width* and *height*.  You can use commands you have learned in the iPython shell to evaluate the current value of each of these variables.  Fill in the operator needed to produce the value specified for each of the following.
 
@@ -510,7 +519,178 @@ test_function("print", index=5,
             not_called_msg = "Did you remove the fifth call to print?",
             incorrect_msg = "Check the operator you specified for the fifth call to print.")
             
-success_msg("Excellent work!!  We have done a lot now with expressions building block.")
+success_msg("Excellent work!!")
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:23117a3b50
+## Combining Variables (2)
+
+We can combine values stored in different variables for other data types.  Let's focus on strings, and combine in a variety of way.
+
+Use the correct operator to complete the requested operation in the script.py.
+
+
+*** =instructions
+- We want to attach the values in *a* and *b* together to create a new combined string.  Separate the 2 pieces with a space.  In computer science, this process of attaching strings is called concatenation.
+- We want to take the value in *a* and repeat it 5 times.  In computer science, this process is called replication.
+- We want to take the value in *a*, repeat it twice, and combine with the value in *b*.  
+
+*** =hint
+- Replace each requested operation with the Python operator for that result
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Variable a is assigned value
+a = "This is a string"
+
+# Variable b is assigned value
+b = "This is another string"
+
+# Concatenate the value in a to the value in b, separate them with a space
+print(a ____ " " ____ b)
+
+# Repeat the value in a, 5 times
+print(a ____ 5)
+
+# Repeat the value in a twice, and combine with the value in b.  
+print(a ____ ____ ____ b)
+
+```
+
+*** =solution
+```{python}
+# Variable a is assigned value
+a = "This is a string"
+
+# Variable b is assigned value
+b = "This is another string"
+
+# Add the value in a to the value in b, separate them with a space
+print(a + " " + b)
+
+# Repeat the value in a, 5 times
+print(a * 5)
+
+# Repeat the value in a twice, and combine with the value in b.  
+print(a * 2 + b)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_object("a",
+            undefined_msg = "Do not remove assignment statement for variable *a*.",
+            incorrect_msg = "Do not remove assignment statement for variable *a*.")
+
+test_object("b",
+            undefined_msg = "Do not remove assignment statement for variable *b*.",
+            incorrect_msg = "Do not remove assignment statement for variable *b*.")
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the first call to print?",
+            incorrect_msg = "Check the operator you used to concatenate the values.")
+            
+test_function("print", index=2,
+            not_called_msg = "Did you remove the second call to print?",
+            incorrect_msg = "Check the operator you used to replicate the value in *a*.")
+
+test_function("print", index=3,
+            not_called_msg = "Did you remove the third call to print?",
+            incorrect_msg = "Check the operators you used to replicate and concatenate values.  Be sure to indicate the number of times to replicate.")
+
+success_msg('Excellent work!!  Let\'s keep going.')
+
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:dd3c482686
+## Combining Expressions and Building Blocks (2)
+
+Combining expressions and building blocks is how we create programs.  Let's create a program that takes the values of 2 string variables, and the value of 2 integer variables.  Create a string that replicates the first string by the first integer value, the second string by the second integer value, and concatenates the results.
+
+*** =instructions
+- Assign the value "I think I am getting the hang of this!!" to variable *a*
+- Assign the value 5 to variable *b*
+- Assign the value "So many strings, so little time." to variable *c*
+- Assign the value 2 to variable *d*
+
+*** =hint
+- Look back at what you did with previous exercises.  The difference on this one is that we are using only variables.
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Assign the value to variable a
+a ____ ____
+
+
+# Assign the value to variable b
+b ____ ____
+
+# Assign the value to variable c
+c ____ ____
+
+# Assign the value to variable d
+d ____ ____
+
+# Print the requested result to screen
+print(a ____ ____ + ____ ____ d)
+
+```
+
+*** =solution
+```{python}
+a = "I think I am getting the hang of this!!"
+
+# Assign the value to variable b
+b = 5
+
+# Assign the value to variable c
+c = "So many strings, so little time."
+
+# Assign the value to variable d
+d = 2
+
+# Print the requested result to screen
+print(a * b + c * d)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_object("a",
+            undefined_msg = "Did you create variable *a*.",
+            incorrect_msg = "Check the value you assigned to variable *a*.")
+
+test_object("b",
+            undefined_msg = "Did you create variable *b*.",
+            incorrect_msg = "Check the value you assigned to variable *b*.")
+
+test_object("c",
+            undefined_msg = "Did you create variable *c*.",
+            incorrect_msg = "Check the value you assigned to variable *c*.")
+
+test_object("a",
+            undefined_msg = "Did you create variable *d*.",
+            incorrect_msg = "Check the value you assigned to variable *d*.")
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Look at instructions and concatenate the pieces as described.")
+            
+success_msg('Excellent work!!  Let\'s try one more program.')
 
 ```
 
