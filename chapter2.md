@@ -663,4 +663,90 @@ test_mc(2, [msg_bad, msg_success, msg_bad, msg_bad])
 
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:d33633f503
+## Fix the Error (3)
+
+Notice the string entered in script on right.  Try running in the iPython shell by highlighting and pressing Ctrl-Enter:
+
+Think about the type of error message you received.
+
+*** =instructions
+- Fix the error
+- Press Submit Answer
+
+*** =hint
+- With syntax errors, look for mismatched "", '', or ()
+- With runtime errors, look for mis-spelled words as Python needs exact match
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+print("This is an example " + "of string concatenation for " + 4 + " strings")
+
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+print("This is an example " + "of string concatenation for " + str(4) + " strings")
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_output_contains("This is an example of string concatenation for 2 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+
+success_msg("Nice job; we needed to convert data type for integer 2 to string in order to use concatenation.")
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2226242978
+## Fix the Error (4)
+
+Notice the string entered in script on right.  Try running in the iPython shell by highlighting and pressing Ctrl-Enter:
+
+Think about the type of error message you received.
+
+*** =instructions
+- Fix the error
+- Press Submit Answer
+
+*** =hint
+- With syntax errors, look for mismatched "", '', or ()
+- With runtime errors, look for mis-spelled words as Python needs exact match
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+n = input("Enter a number between 1 and 10: ")
+n = n + 2
+
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+n = input("Enter a number between 1 and 10: ")
+n = int(n) + 2
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_output_contains("This is an example of string concatenation for 2 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+
+success_msg("Nice job; we needed to convert data type for integer 2 to string in order to use concatenation.")
+
+```
+
 
