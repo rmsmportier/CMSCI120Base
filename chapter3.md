@@ -39,8 +39,10 @@ print("Hello World!")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("Hello World!", pattern=False, no_output_msg = "Take a look at the instructions and try again")
-
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the string you specified, and make sure the case/punctuation match to what was requested.")
+            
 success_msg('Nice job!!  Although a very simple program, that one line is a functional program.  Any time you want to communicate output from the computer, you would use a building block designed for output.  In Python, this is the *print()* function.  Anything we place inside the "" will print to the screen.')
 
 ```
@@ -98,8 +100,6 @@ print(type(a))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("I believe a is int", pattern=False, no_output_msg = "Take a look at the instructions and try again")
-
 test_object("a",
             undefined_msg = "Do not remove assignment statement for variable *a*.",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
@@ -110,7 +110,7 @@ test_function("print", index=1,
 
 test_function("print", index=2,
             not_called_msg = "Did you remove the second call to print?",
-            incorrect_msg = "Did you remove the second call to print?")
+            incorrect_msg = "Check what you passed to second print.  This should be call to type() function and variable")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
@@ -172,8 +172,6 @@ print(type(a))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("I believe a is float", pattern=False, no_output_msg = "Take a look at the instructions and try again")
-
 test_object("a",
             undefined_msg = "Do not remove assignment statement for variable *a*.",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
@@ -184,7 +182,7 @@ test_function("print", index=1,
 
 test_function("print", index=2,
             not_called_msg = "Did you remove the second call to print?",
-            incorrect_msg = "Did you remove the second call to print?")
+            incorrect_msg = "Check what you passed to second print.  This should be call to type() function and variable.")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
@@ -246,8 +244,6 @@ print(type(a))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_output_contains("I believe a is str", pattern=False, no_output_msg = "Take a look at the instructions and try again")
-
 test_object("a",
             undefined_msg = "Do not remove assignment statement for variable *a*.",
             incorrect_msg = "Do not remove assignment statement for variable *a*.")
@@ -258,7 +254,7 @@ test_function("print", index=1,
             
 test_function("print", index=2,
             not_called_msg = "Did you remove the second call to print?",
-            incorrect_msg = "Did you remove the second call to print?")
+            incorrect_msg = "Check what you passed to second print.  This should be call to type() function and variable.")
 
 test_function("type",
             not_called_msg = "Did you remove the call to type?",
