@@ -144,6 +144,10 @@ print("This is a string")
 
 test_output_contains("This is a string", pattern=False, no_output_msg = "Take a look at the instructions and try again")
 
+test_function("print", index=1,
+            not_called_msg = "Did you call print?",
+            incorrect_msg = "Make sure a valid string is passed to print statement.  Look at hint to help you identify.")
+
 success_msg("Good job! It is important that the quotes at both end of string are the same type of quote.")
 
 ```
@@ -203,6 +207,10 @@ print(a)
 test_object("a",
             undefined_msg = "Don't remove the definition of variable *a*.",
             incorrect_msg = "Check your calculation again.")
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the variable in print statement.")
 
 success_msg("Good job! This was a semantic error because we missed entering 13.")
 
@@ -435,7 +443,7 @@ Using (), show the groupings as they would be applied for PEMDAS.  Run the resul
 
 *** =sample_code
 ```{python}
-# Correct the syntax error below
+# Add () around PEMDAS groupings
 a = 2 + 3 * 5 + 9
 
 # Print value of a
@@ -487,7 +495,7 @@ Using (), show the groupings as they would be applied for PEMDAS.  Run the resul
 
 *** =sample_code
 ```{python}
-# Correct the syntax error below
+# Add () for PEMDAS grouping
 a = 2 + 3 * (5 + 9)
 
 # Print value of a
@@ -539,7 +547,7 @@ Using (), show the groupings as they would be applied for PEMDAS.  Run the resul
 
 *** =sample_code
 ```{python}
-# Correct the syntax error below
+# Add () for PEMDAS grouping
 a = 2 // 3 + 5 % 9
 
 # Print value of a
@@ -618,6 +626,10 @@ test_student_typed("x\s*=\s*87",not_typed_msg="Check your variable assignment st
 test_object("x",
             undefined_msg = "You need an assignment statement for variable *x*.",
             incorrect_msg = "Did you correct assignment for variable *x*?")
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Be sure to print variable *x*.  Look at hint to help you identify.")
 
 success_msg("Nice job; Assignment statements must put variable on the left and expression on the right.")
 
@@ -699,6 +711,11 @@ print("This is an example " + "of string concatenation for " + str(4) + " string
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 test_output_contains("This is an example of string concatenation for 4 strings", pattern=False, no_output_msg = "Take a look at the instructions and try again")
+
+test_function("print", index=1,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the string that you created, and ensure it matches directions.  Look at hint to help you identify.")
+
 
 success_msg("Nice job; we needed to convert data type for *int* 4 to *str* in order to use concatenation.")
 
