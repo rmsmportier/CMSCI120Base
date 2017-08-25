@@ -146,7 +146,7 @@ test_output_contains("This is a string", pattern=False, no_output_msg = "Take a 
 
 test_function("print", index=1,
             not_called_msg = "Did you call print?",
-            incorrect_msg = "Make sure a valid string is passed to print statement.  Look at hint to help you identify.")
+            incorrect_msg = "Make sure a valid string is passed to print function.  Look at hint to help you identify.")
 
 success_msg("Good job! It is important that the quotes at both end of string are the same type of quote.")
 
@@ -210,7 +210,7 @@ test_object("a",
 
 test_function("print", index=1,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the variable in print statement.")
+            incorrect_msg = "Check the variable in print function.")
 
 success_msg("Good job! This was a semantic error because we missed entering 13.")
 
@@ -717,7 +717,7 @@ test_function("print", index=1,
             incorrect_msg = "Check the string that you created, and ensure it matches directions.  Look at hint to help you identify.")
 
 
-success_msg("Nice job; we needed to convert data type for *int* 4 to *str* in order to use concatenation.")
+success_msg("Nice job; we needed to convert data type for 4 from integer to string in order to use concatenation.")
 
 ```
 
