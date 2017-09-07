@@ -448,13 +448,17 @@ print(math.ceil(24/7))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_function("dir", index=1,
-            not_called_msg = "Did you call dir?",
-            incorrect_msg = "Check the function you specified for dir.")
-
 test_function("print", index=1,
-            not_called_msg = "Did you call print the converted radians?",
-            incorrect_msg = "Check the function syntax for radians.")
+            not_called_msg = "Did you call print with floor division?",
+            incorrect_msg = "Check the values you are dividing and the operator.")
+
+test_function("math.floor", index=1,
+            not_called_msg = "Did you call print with floor from math function?",
+            incorrect_msg = "The value you are sending should be decimal number resulting from division.")
+
+test_function("math.ceil", index=1,
+            not_called_msg = "Did you call print with calculation for smallest integer greater than?",
+            incorrect_msg = "The value you are sending should be decimal number resulting from division.")
 
 success_msg("Good work")
 
