@@ -374,10 +374,6 @@ help(math.radians)
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_function("import", index=1,
-            not_called_msg = "Did you import the module?",
-            incorrect_msg = "Check the module you specified for import.")
-
 test_function("dir", index=1,
             not_called_msg = "Did you call dir?",
             incorrect_msg = "Check the function you specified for dir.")
