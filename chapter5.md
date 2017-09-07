@@ -317,7 +317,7 @@ success_msg("Nice work; let's move on to add-in functions")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:4b8e2eab31
-## Add In Functions (4)
+## Add In Functions
 
 Before we can use add in functions, we first need to make the function module available to our current work session in Python.
 
@@ -332,12 +332,13 @@ We can also use *help* with individual functions to learn how to use.  When call
 *** =instructions
 - Enter *import math* in order to use the functions in this module
 - Identify all possible functions by using *dir* for this function module
-- Call help on the module radians
+- Look up help for function radians, in the shell
+- Based on information obtained, print the number of radians in 246 degrees
 
 *** =hint
 - The instructions provide the exact syntax to use to import function module math
 - Use *dir()* and put *math* inside ()
-- Use *help()* and put put *math.radians* inside ()
+- Use *help()* and put *math.radians* inside ()
 
 *** =pre_exercise_code
 ```{python}
@@ -352,8 +353,8 @@ ____ ____
 # Identify all functions available using dir
 ____(____)
 
-# Look up help for the radians function inside math
-____(____.____)
+# Convert 246 degrees to radians
+print(____.____(246))
 
 ```
 
@@ -365,8 +366,8 @@ import math
 # Identify all functions available using dir
 dir(math)
 
-# Look up help for the radians function inside math
-help(math.radians)
+# Convert 246 degrees to radians
+print(math.radians(246))
 
 ```
 
