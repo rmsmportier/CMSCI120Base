@@ -316,3 +316,74 @@ success_msg("Nice work; let's move on to add-in functions")
 ```
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:4b8e2eab31
+## Add In Functions
+
+Before we can use add in functions, we first need to make the function module available to our current work session in Python.
+
+We do this with the *import* statement, followed by the function module name.  
+
+Let's start with the function module *math*.  
+
+We will explore functions available in this function module.  We can do this with the *dir* function as we did earlier in the homework for builtins.  This will list all available functions.  
+
+We can also use *help* with individual functions to learn how to use.  When calling *help*, we will need to preface each function name with the module name in a format like "math.pi".
+
+*** =instructions
+- Enter *import math* in order to use the functions in this module
+- Identify all possible functions by using *dir* for this function module
+- Look up help for function radians, in the shell
+- Based on information obtained, print the number of radians in 246 degrees
+
+*** =hint
+- The instructions provide the exact syntax to use to import function module math
+- Use *dir()* and put *math* inside ()
+- Use *help()* and put *math.radians* inside ()
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import math into our Python session
+____ ____
+
+# Identify all functions available using dir
+____(____)
+
+# Convert 246 degrees to radians
+print(____.____(246))
+
+```
+
+*** =solution
+```{python}
+# Import math into our Python session
+import math
+
+# Identify all functions available using dir
+dir(math)
+
+# Convert 246 degrees to radians
+print(math.radians(246))
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_function("dir", index=1,
+            not_called_msg = "Did you call dir?",
+            incorrect_msg = "Check the function you specified for dir.")
+
+test_function("print", index=1,
+            not_called_msg = "Did you call print the converted radians?",
+            incorrect_msg = "Check the function syntax for radians.")
+
+success_msg("Good work")
+
+```
+
