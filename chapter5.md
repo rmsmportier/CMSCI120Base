@@ -136,7 +136,7 @@ test_function("print", index=5,
             not_called_msg = "Did you remove the call to print?",
             incorrect_msg = "Check the function you selected for the fifth call to print.")
             
-success_msg('Nice work.  Notice that spaces have lower value than letters, and that capital letters have lower value than lower case letters.  Also notice that for all calls we created a grouping of values by using either () or "" around the full set of values to evaluate.')
+success_msg('Nice work.  Notice that spaces have lower value than letters, and that capital letters have lower value than lower case letters.  Also notice that for all calls we created a grouping of values by using either () or "" around the full set of values to evaluate.  When the grouping is done with () and , we have created a tuple.  When we use "", we have created a string with multiple characters.')
 
 ```
 
@@ -144,82 +144,53 @@ success_msg('Nice work.  Notice that spaces have lower value than letters, and t
 --- type:NormalExercise lang:python xp:100 skills:1 key:252d420681
 ## Built In Functions (3)
 
-We can now easily modify our earlier program to print a different character, and a different number of times to the screen.  This time I have created and run code that produced the design shown.  
-
-Modify the values in *a* and *b* to create the same design.  
-
-I will save you the effort, and tell you that there are 37 $ in the first row of design.
+We will explore a few built in functions designed to work with numeric values.  The functions we will focus on are *sum*, *abs*, *divmod*, and *round*.  For each, explore what the function does by entering *help(function name)* from the shell.
 
 *** =instructions
-- Modify the value in variable *a*
-- Modify the value in variable *b*
+- Use the *sum* function to sum the numbers 5, 10, 15, 20, 25, 30.  Remember to surround the group of numbers with () so that we are passing a tuple.
+- I previously calculated a value that is stored in variable *result*.  You can look at the value by entering the variable name or by using *print* to print the variable name from the shell.  Pick one of the 4 functions (*sum*, *abs*, *divmod*, *round*) to keep only the value portion of the result, and not the sign in front of the number.
+- Use *divmod* function with the numbers 28 and 5.  What 2 numbers are created?
+- Use *round* and change arguments to round the result of variable *result* to 3 decimal places.
 
 *** =hint
-- Use assignment operator as we have done previously, and string indicator for the character to assign
+- Use *help* along with function name in () to understand what each function is doing
 
 *** =pre_exercise_code
 ```{python}
-# Assign value to variable a
-a = "$"
-
-# Assign value to variable b
-b = 37
-
-# Print the first line of design
-print(a * b)
-
-# Print the second line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the third line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the fourth line of design
-print(a * b)
+import math
+result = 100-2000 * 5/4 + math.pi
 
 ```
 
 *** =sample_code
 ```{python}
-# Assign value to variable a
-a ____ ____
+# Use sum to calculate the sum of numbers provided
+print(sum(____5, 10, ____, 20, ____, 30____))
 
-# Assign value to variable b
-b ____ ____
+# Find value in result variable, and print value with no sign
+print(____(result))
 
-# Print the first line of design
-print(a * b)
+# Use divmod with numbers indicated
+print(____(____, ____))
 
-# Print the second line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the third line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the fourth line of design
-print(a * b)
+# Use round to round value in variable result to 3 decimal places
+print(____(result, ____))
 
 ```
 
 *** =solution
 ```{python}
-# Assign value to variable a
-a = "$"
+# Use sum to calculate the sum of numbers provided
+print(sum((5, 10, 15, 20, 25, 30)))
 
-# Assign value to variable b
-b = 37
+# Find value in result variable, and print value with no sign
+print(abs(result))
 
-# Print the first line of design
-print(a * b)
+# Use divmod with numbers indicated
+print(divmod(28, 5))
 
-# Print the second line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the third line of design
-print(a + ' ' * (b-2) + a)
-
-# Print the fourth line of design
-print(a * b)
+# Use round to round value in variable result to 3 decimal places
+print(round(result, 3))
 
 ```
 
@@ -227,109 +198,89 @@ print(a * b)
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_object("a",
-            undefined_msg = "Do not remove assignment statement for variable *a*.",
-            incorrect_msg = "Check the value you assigned to variable *a*.")
-
-test_object("b",
-            undefined_msg = "Do not remove assignment statement for variable *b*.",
-            incorrect_msg = "Check the value you assigned to variable *b*.")
-
 test_function("print", index=1,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the first call to print.")
+            incorrect_msg = "Check the values you entered, and the function name.")
             
 test_function("print", index=2,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the second call to print.")
+            incorrect_msg = "Check the function you selected.")
             
 test_function("print", index=3,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the third call to print.")
+            incorrect_msg = "Check the values you entered, and the function name.")
             
 test_function("print", index=4,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the first call to print.")
+            incorrect_msg = "Are you calling round to the correct number of decimal places?")
 
-success_msg('Nice job!!  You are now programming in Python with 2 of 6 building blocks')
+success_msg('Nice job!!  Did you notice that *divmod* returned a tuple of values, and that those values were the integer division and modulus combined together?')
 
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:7522f73f67
-## Variables Create Flexibility (2)
+## Built In Functions (4)
 
-Let's modify our program even further.   
-
-The new design we want to create is displayed, with 42 occurrences of # on first line.  
-
-Let's reduce the identical second and third print statements down to one print statement.  
-
-What character could we put in place of ____ in our new print statement that will ensure we get identical output but on different lines? 
-
-What value would we need to assign to *end* argument to make everything work correctly?
+There are also several nice functions we can use with string data.  Let's experiment with just 2 of them.  Every character in the computer is actually calculated as a number before converting to binary code.  These decimal equivalents allow us to do arithmetic with characters.  This is something that proves very helpful related to encryption algorithms.  We will spend some time on these in lab 4 this week.
 
 *** =instructions
-- Assign the value to variable *a*
-- Assign the value to variable *b*
+- Use the *ord* function to identify the numeric value for "A"
+- Use the *ord* function to identify the numeric value for "a"
+- Take the difference between *ord* result for "a" and *ord* result for "A"
+- Use the *chr* function to identify the character with decimal value 104
+- Use the *chr* function to identify the character with decimal value 128
+- Use combination of *ord* and *chr* to identify the character that is 5 greater than the character "E"
 
 *** =hint
-- Use assignment operator as we have done previously, and string indicator for the character to assign
-- This time there are 42 occurrences of # on first line
+- You can use *help(ord)* and *help(chr)* to determine what each does
+- Enter the values requested for each function call
 
 *** =pre_exercise_code
 ```{python}
-# Assign value to variable a
-a = "#"
-
-# Assign value to variable b
-b = 42
-
-# Print the first line of design
-print(a * b)
-
-# Print the second and third lines of design.  Specify the character needed at end of each line, and the value for end=
-print((a + ' ' * (b-2) + a + "\n") * 2, end = "")
-
-# Print the fourth line of design
-print(a * b)
 
 ```
 
 *** =sample_code
 ```{python}
-# Assign value to variable a
-a ____ ____
+# Use ord to determine numeric value for "A"
+print(____("____"))
 
-# Assign value to variable b
-b ____ ____
+# Use ord to determine numeric value for "a"
+print(____("____"))
 
-# Print the first line of design
-print(a * b)
+# How far apart are the values "A" and "a"
+print(____(____))- ____(____))
 
-# Print the second and third lines of design.  Specify the character needed at end of each line, and the value for end=
-print((a + ' ' * (b-2) + a + ____) * 2, end = ____)
+# Use chr to identify character for 104
+print(____(____))
 
-# Print the fourth line of design
-print(a * b)
+# Use chr to identify character for 128
+print(____(____))
+
+# Combine ord and chr to find character 5 greater than "E"
+print(____(____(____) + ____))
 
 ```
 
 *** =solution
 ```{python}
-# Assign value to variable a
-a = "#"
+# Use ord to determine numeric value for "A"
+print(ord("A"))
 
-# Assign value to variable b
-b = 42
+# Use ord to determine numeric value for "a"
+print(ord("A"))
 
-# Print the first line of design
-print(a * b)
+# How far apart are the values "A" and "a"
+print(ord("a"))- ord("A"))
 
-# Print the second and third lines of design.  Specify the character needed at end of each line, and the value for end=
-print((a + ' ' * (b-2) + a + "\n") * 2, end = "")
+# Use chr to identify character for 104
+print(chr(104))
 
-# Print the fourth line of design
-print(a * b)
+# Use chr to identify character for 128
+print(chr(128))
+
+# Combine ord and chr to find character 5 greater than "E"
+print(chr(ord("E") + 5))
 
 ```
 
@@ -337,27 +288,31 @@ print(a * b)
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_object("a",
-            undefined_msg = "Do not remove assignment statement for variable *a*.",
-            incorrect_msg = "Check the value you assigned to variable *a*.")
-
-test_object("b",
-            undefined_msg = "Do not remove assignment statement for variable *b*.",
-            incorrect_msg = "Check the value you assigned to variable *b*.")
-
 test_function("print", index=1,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the first call to print.")
+            incorrect_msg = "Check the function and value you specified.")
 
 test_function("print", index=2,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the second call to print.  Think about the character that forces Python to new line, and the character that ensures print does not automatically go to new line at end.")
+            incorrect_msg = "Check the function and value you specified.")
             
 test_function("print", index=3,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string you specified for the third call to print.")
+            incorrect_msg = "Check the function and value(s) you specified.  You need to do arithmetic, so you need to convert character values to decimal.  Which function would do this?")
 
-success_msg('Nice work; keep it going')
+test_function("print", index=4,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the function and value you specified.")
+            
+test_function("print", index=5,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the function and value you specified.")
+            
+test_function("print", index=6,
+            not_called_msg = "Did you remove the call to print?",
+            incorrect_msg = "Check the order in which you are calling functions, and the value you are adding.  Change the 'E' to decimal, add the value, then convert back to character.")
+            
+success_msg('Nice work; let's move on to add-in functions')
 
 ```
 
