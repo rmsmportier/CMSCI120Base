@@ -379,10 +379,6 @@ test_function("dir", index=1,
             not_called_msg = "Did you call dir?",
             incorrect_msg = "Check the function you specified for dir.")
 
-test_function("help", index=1,
-            not_called_msg = "Did you call help on correct function?",
-            incorrect_msg = "Check the syntax for help and the function name.  Make sure you include module.function syntax.")
-
 success_msg("Good job.  This approach can be used for any time we want to use functions from inside add in function modules.")
 
 ```
