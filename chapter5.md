@@ -17,7 +17,7 @@ To start, we need to see what functions are available when we first start Python
 Run the code on the right to get a listing of all available functions.  You can do this by highlighting both lines, and then pressing Ctrl-Enter.  
 
 *** =instructions
-- Generate the listing of available functions by highlighting both lines, and pressing Ctrl-Enter at same time.  Once you have looked through the listing, press *Submit Answer*
+- Generate the listing of available functions by entering highlighting both lines, and pressing Ctrl-Enter at same time.  Once you have looked through the listing, press *Submit Answer*
 
 *** =hint
 - You do not need to change anything.  Once you have viewed the listing, you can "Submit Answer"
