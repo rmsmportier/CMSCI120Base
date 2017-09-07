@@ -333,12 +333,12 @@ We can also use *help* with individual functions to learn how to use.  When call
 - Enter *import math* in order to use the functions in this module
 - Identify all possible functions by using *dir* for this function module
 - Look up help for function radians, in the shell
-- Based on information obtained, print the number of radians in 246 degrees
+- Based on information obtained, print the number of radians in 246 degrees, round to 4 decimal places
 
 *** =hint
 - The instructions provide the exact syntax to use to import function module math
 - Use *dir()* and put *math* inside ()
-- Use *help()* and put *math.radians* inside ()
+- Use *help()* with *math.radians* inside () from shell to identify syntax
 
 *** =pre_exercise_code
 ```{python}
@@ -353,8 +353,8 @@ ____ ____
 # Identify all functions available using dir
 ____(____)
 
-# Convert 246 degrees to radians
-print(____.____(246))
+# Convert 246 degrees to radians, round to 4 decimal places
+print(____(____.____(246),____))
 
 ```
 
@@ -367,7 +367,80 @@ import math
 dir(math)
 
 # Convert 246 degrees to radians
-print(math.radians(246))
+print(round(math.radians(246),4)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_function("dir", index=1,
+            not_called_msg = "Did you call dir?",
+            incorrect_msg = "Check the function you specified for dir.")
+
+test_function("print", index=1,
+            not_called_msg = "Did you call print the converted radians?",
+            incorrect_msg = "Check the function syntax for radians.")
+
+success_msg("Good work")
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:ab29ce1bd4
+## Add In Functions (2)
+
+Let's look at 2 more math module functions.  We have learned about floor division, also called integer division.  We can use a function from *math* to accomplish the same thing.
+
+What if we want to know the integer that is just above the value we calculate?  We could choose to round the decimal value to the nearest integer.  We can also use a function from *math* that would do the same thing.
+
+If floor gives us the integer just below, what function should we look to find?
+
+*** =instructions
+- Enter *import math* in order to use the functions in this module
+- Use // to calculate floor division for 24 and 7
+- Use the *floor* function from *math* module to do the same
+- Now identify a function, and use that function to calculate the smallest integer greater than the result of 24/7
+
+*** =hint
+- The instructions provide the exact syntax to use to import function module *math*
+- Use floor division as we have done in class several times
+- Then use the *floor* function from *math*
+- What is the opposite of floor?
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import math into our Python session
+____ ____
+
+# Calculate floor division result
+print(____ // ____)
+
+# Use the floor function from math module to calculate floor division
+print(____.____(____/____))
+
+# What is the smallest integer greater than result?
+print(____.____(____/____))
+```
+
+*** =solution
+```{python}
+# Import math into our Python session
+import math
+
+# Calculate floor division result
+print(24 // 7)
+
+# Use the floor function from math module to calculate floor division
+print(math.floor(24/7))
+
+# What is the smallest integer greater than result?
+print(math.ceil(24/7))
 
 ```
 
