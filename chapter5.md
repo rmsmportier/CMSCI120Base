@@ -486,7 +486,7 @@ test_object("b",
             
 test_object("c",
             undefined_msg = "Don't remove the definition of variable *c*.",
-            incorrect_msg = "Check the operator and values used to calculate variable *c*.  You need a function different from *floor*.")
+            incorrect_msg = "Check the function and values used to calculate variable *c*.")
             
 success_msg("Good work")
 
