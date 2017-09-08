@@ -415,9 +415,9 @@ If floor gives us the greatest integer less than, what function should we look t
 
 *** =instructions
 - Enter *import math* in order to use the functions in this module
-- Use // to calculate floor division for 24 and 7
-- Use the *floor* function from *math* module to do the same
-- Now identify a function, and use that function to calculate the smallest integer greater than the result of 24/7
+- Use // to calculate floor division for 24 and 7, assign the result to *a*
+- Use the *floor* function from *math* module to do the same, assign the result to *b*
+- Now identify a function in *math* module, and use that function to calculate the smallest integer greater than the result of 24/7.  Assign that result to *c*
 
 *** =hint
 - The instructions provide the exact syntax to use to import function module *math*
@@ -436,13 +436,17 @@ If floor gives us the greatest integer less than, what function should we look t
 ____ ____
 
 # Calculate floor division result
-print(____ // ____)
+a = ____ // ____
+print(a)
 
 # Use the floor function from math module to calculate floor division
-print(____.____(____/____))
+b = ____.____(____/____)
+print(b)
 
 # What is the smallest integer greater than result?
-print(____.____(____/____))
+c = ____.____(____/____)
+print(c)
+
 ```
 
 *** =solution
@@ -451,13 +455,16 @@ print(____.____(____/____))
 import math
 
 # Calculate floor division result
-print(24 // 7)
+a = 24 // 7
+print(a)
 
 # Use the floor function from math module to calculate floor division
-print(math.floor(24/7))
+b = math.floor(24/7)
+print(b)
 
 # What is the smallest integer greater than result?
-print(math.ceil(24/7))
+c = math.ceil(24/7)
+print(c)
 
 ```
 
@@ -467,9 +474,13 @@ print(math.ceil(24/7))
 
 test_import("math", same_as=True, not_imported_msg="Did you import the *math* module?", incorrect_as_msg="Import is not importing correct function module")
 
+test_student_typed("24\s*//\s*7",not_typed_msg="Did you define floor division // for correct values?")
+
 test_function("print", index=1,
             not_called_msg = "Did you call print with floor division?",
             incorrect_msg = "Check the values you are dividing and the operator used.")
+
+test_student_typed("24\s*//\s*7",not_typed_msg="Did you define floor division // for correct values?")
 
 test_function("print", index=2,
             not_called_msg = "Did you print value using *floor* function from *math* module?",
