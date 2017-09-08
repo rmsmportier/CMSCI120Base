@@ -147,6 +147,10 @@ test_function("print", index=6,
             not_called_msg = "Check the directions for this result, and do not remove print function.",
             incorrect_msg = "How do you identify the largest value?")
 
+test_student_typed("This is a test, this is only a test",not_typed_msg="Are you using correct string value for the longer strings?")
+
+test_student_typed("This is A test, this is only a test",not_typed_msg="Are you using correct string value for the longer strings?")
+
 success_msg('Nice work.  Notice that spaces have lower value than letters, and that capital letters have lower value than lower case letters.  Also notice that for all calls we created a grouping of values by using either () or "" around the full set of values to evaluate.  When the grouping is done using () along with , we have created a tuple.  When we use "", we have created a string with multiple characters.')
 
 ```
@@ -484,10 +488,14 @@ test_object("b",
             undefined_msg = "Don't remove the definition of variable *b*.",
             incorrect_msg = "Check the operator and values used to calculate variable *b*.  You should be using *math.floor*.")
             
+test_student_typed("24\s*/\s*7",not_typed_msg="Are you using correct values for calculating *b* with *math.floor*?")
+
 test_object("c",
             undefined_msg = "Don't remove the definition of variable *c*.",
             incorrect_msg = "Check the function and values used to calculate variable *c*.")
             
+test_student_typed("24\s*/\s*7",not_typed_msg="Are you using correct values for calculating *c* with *math.ceil*?")
+
 success_msg("Good work")
 
 ```
