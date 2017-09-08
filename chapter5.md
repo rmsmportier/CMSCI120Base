@@ -474,22 +474,20 @@ print(c)
 
 test_import("math", same_as=True, not_imported_msg="Did you import the *math* module?", incorrect_as_msg="Import is not importing correct function module")
 
-test_student_typed("24\s*//\s*7",not_typed_msg="Did you define floor division // for correct values?")
+test_student_typed("24\s*//\s*7",not_typed_msg="Did you define floor division // for correct values when creating variable *a*?")
 
-test_function("print", index=1,
-            not_called_msg = "Did you call print with floor division?",
-            incorrect_msg = "Check the values you are dividing and the operator used.")
+test_object("a",
+            undefined_msg = "Don't remove the definition of variable *a*.",
+            incorrect_msg = "Check the operator and values used to calculate variable *a*.")
 
-test_student_typed("24\s*//\s*7",not_typed_msg="Did you define floor division // for correct values?")
-
-test_function("print", index=2,
-            not_called_msg = "Did you print value using *floor* function from *math* module?",
-            incorrect_msg = "Check the function you provided, and the values you sent to function.")
-
-test_function("print", index=3,
-            not_called_msg = "Did you print value using smallest integer greater than function from *math* module?",
-            incorrect_msg = "Check the function you provided, and the values you sent to function.")
-
+test_object("b",
+            undefined_msg = "Don't remove the definition of variable *b*.",
+            incorrect_msg = "Check the operator and values used to calculate variable *b*.  You should be using *math.floor*.")
+            
+test_object("c",
+            undefined_msg = "Don't remove the definition of variable *c*.",
+            incorrect_msg = "Check the operator and values used to calculate variable *c*.  You need a function different from *floor*.")
+            
 success_msg("Good work")
 
 ```
