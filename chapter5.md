@@ -386,7 +386,7 @@ print(round(math.radians(246),4))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed("import\s*math",not_typed_msg="Check the function module import statement for *math* module")
+test_import("math", same_as=True, not_imported_msg="Did you import the *math* module?", incorrect_as_msg="Import is not importing correct function module")
 
 test_function("dir", index=1,
             not_called_msg = "Did you call dir?",
@@ -465,7 +465,7 @@ print(math.ceil(24/7))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed("import\s*math",not_typed_msg="Check the function module import statement for *math* module")
+test_import("math", same_as=True, not_imported_msg="Did you import the *math* module?", incorrect_as_msg="Import is not importing correct function module")
 
 test_function("print", index=1,
             not_called_msg = "Did you call print with floor division?",
@@ -478,14 +478,6 @@ test_function("print", index=2,
 test_function("print", index=3,
             not_called_msg = "Did you print value using smallest integer greater than function from *math* module?",
             incorrect_msg = "Check the function you provided, and the values you sent to function.")
-
-test_function("math.floor", index=1,
-            not_called_msg = "Did you call print with floor from math function?",
-            incorrect_msg = "The value you are sending should be decimal number resulting from division.")
-
-test_function("math.ceil", index=1,
-            not_called_msg = "Did you call print with calculation for smallest integer greater than?",
-            incorrect_msg = "The value you are sending should be decimal number resulting from division.")
 
 success_msg("Good work")
 
