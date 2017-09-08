@@ -64,8 +64,9 @@ In the shell, enter *help(min)* and *help(max)*.  Look at the description to und
 - Pick one of the 2 functions to find the largest value in the group of numbers provided
 - Pick one of the 2 functions to find the smallest value in the group of numbers provided
 - Use the *min* function with a string "This is a test, this is only a test" to see the *smallest* value in the string.
+- Use the *min* function with a string "This is A test, this is only a test" to see the *smallest* value in new string.
 - Use the *max* function with a string "This is A test, this is only a test" to see the *smallest* value in new string.
-- Pick one of the 2 functions which has greater value in computer, "A" or "a".
+- Pick one of the 2 functions to determine which has greater value in computer, "A" or "a".
 
 *** =hint
 - Replace ____ with appropriate function to accomplish stated goal.  You can use *help()* with function name passed to *help* in order to assist in selecting correct function.
@@ -76,11 +77,14 @@ In the shell, enter *help(min)* and *help(max)*.  Look at the description to und
 
 *** =sample_code
 ```{python}
-# Find the smallest value in grouping of numbers
+# Find the largest value in grouping of numbers
 print(____(3, 4, 5, 9, 1, -4))
 
-# Find the largest value in grouping of numbers
+# Find the smallest value in grouping of numbers
 print(____(9, 2, 20, -4, -20, 7))
+
+# Use min with string to find the smallest value in string
+print(min("_____"))
 
 # Use min with string to find the smallest value in string
 print(min("_____"))
@@ -95,14 +99,17 @@ print(____(("A","a")))
 
 *** =solution
 ```{python}
-# Find the smallest value in grouping of numbers
-print(min(3, 4, 5, 9, 1, -4))
-
 # Find the largest value in grouping of numbers
-print(max(9, 2, 20, -4, -20, 7))
+print(max(3, 4, 5, 9, 1, -4))
+
+# Find the smallest value in grouping of numbers
+print(min(9, 2, 20, -4, -20, 7))
 
 # Use min with string to find the smallest value in string
 print(min("This is a test, this is only a test"))
+
+# Use min with string to find the smallest value in string
+print(min("This is A test, this is only a test"))
 
 # Use max with string to find the greatest value in string
 print(max("This is A test, this is only a test"))
@@ -117,26 +124,30 @@ print(max(("A","a")))
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 test_function("print", index=1,
-            not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the function you selected for the first call to print.")
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "How do you identify the largest value?")
             
 test_function("print", index=2,
-            not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the function you selected for the second call to print.")
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "How do you identify the smallest value?")
             
 test_function("print", index=3,
-            not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string in the third call to print.")
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "Did you enter the correct string?")
             
 test_function("print", index=4,
-            not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the string in the fourth call to print.")
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "Did you enter the correct string?")
             
 test_function("print", index=5,
-            not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the function you selected for the fifth call to print.")
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "Did you enter the correct string?")
             
-success_msg('Nice work.  Notice that spaces have lower value than letters, and that capital letters have lower value than lower case letters.  Also notice that for all calls we created a grouping of values by using either () or "" around the full set of values to evaluate.  When the grouping is done with () and , we have created a tuple.  When we use "", we have created a string with multiple characters.')
+test_function("print", index=6,
+            not_called_msg = "Check the directions for this result, and do not remove print function.",
+            incorrect_msg = "How do you identify the largest value?")
+
+success_msg('Nice work.  Notice that spaces have lower value than letters, and that capital letters have lower value than lower case letters.  Also notice that for all calls we created a grouping of values by using either () or "" around the full set of values to evaluate.  When the grouping is done using () along with , we have created a tuple.  When we use "", we have created a string with multiple characters.')
 
 ```
 
@@ -199,7 +210,7 @@ print(round(result, 3))
 
 test_function("print", index=1,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the values you entered, and the function name.")
+            incorrect_msg = "Check the values you passed to *sum*.  Be sure to include () to create tuple.")
             
 test_function("print", index=2,
             not_called_msg = "Did you remove the call to print?",
@@ -207,13 +218,13 @@ test_function("print", index=2,
             
 test_function("print", index=3,
             not_called_msg = "Did you remove the call to print?",
-            incorrect_msg = "Check the values you entered, and the function name.")
+            incorrect_msg = "What values did you pass to *divmod* function?")
             
 test_function("print", index=4,
             not_called_msg = "Did you remove the call to print?",
             incorrect_msg = "Are you calling round to the correct number of decimal places?")
 
-success_msg('Nice job!!  Did you notice that *divmod* returned a tuple of values, and that those values were the integer division and modulus combined together?')
+success_msg('Nice job!!  Did you notice that *divmod* returned a tuple of values, and that those values are the integer division and modulus combined together?')
 
 ```
 
@@ -311,7 +322,7 @@ test_function("print", index=6,
             not_called_msg = "Did you remove the call to print?",
             incorrect_msg = "Check the order in which you are calling functions, and the value you are adding.  Change the 'E' to decimal, add the value, then convert back to character.")
             
-success_msg("Nice work; let's move on to add-in functions")
+success_msg("Nice work.  Did you notice that the difference between 'a' and 'A' is more than 26 characters?  There are actually special characters in-between.")
 
 ```
 
@@ -327,7 +338,7 @@ Let's start with the function module *math*.
 
 We will explore functions available in this function module.  We can do this with the *dir* function as we did earlier in the homework for builtins.  This will list all available functions.  
 
-We can also use *help* with individual functions to learn how to use.  When calling *help*, we will need to preface each function name with the module name in a format like "math.pi".
+We can also use *help* with individual functions to learn usage.  When calling *help*, we will need to preface each function name with the module name in a format like *math.pi*.
 
 *** =instructions
 - Enter *import math* in order to use the functions in this module
