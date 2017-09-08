@@ -386,13 +386,19 @@ print(round(math.radians(246),4))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
+test_student_typed("import\s*math",not_typed_msg="Check the function module import statement for *math* module")
+
 test_function("dir", index=1,
             not_called_msg = "Did you call dir?",
             incorrect_msg = "Check the function you specified for dir.")
 
-test_function("print", index=1,
-            not_called_msg = "Did you call print the converted radians?",
-            incorrect_msg = "Check the function syntax for radians.")
+test_function("math.radians", index=1,
+            not_called_msg = "Did you call function to convert to radians?",
+            incorrect_msg = "Check the argument values passed to radians")
+
+test_function("round", index=1,
+            not_called_msg = "Did you round the result?",
+            incorrect_msg = "Did you round to correct number of digits?")
 
 success_msg("Good work")
 
@@ -401,11 +407,11 @@ success_msg("Good work")
 --- type:NormalExercise lang:python xp:100 skills:1 key:ab29ce1bd4
 ## Add In Functions (2)
 
-Let's look at 2 more math module functions.  We have learned about floor division, also called integer division.  We can use a function from *math* to accomplish the same thing.
+Let's look at two more math module functions.  We have learned about floor division, also called integer division.  We can use a function from *math* to achieve same result.  This function is useful when we have completed complex arithmetic expression evaluation as // only works when we provide two operands.
 
-What if we want to know the integer that is just above the value we calculate?  We could choose to round the decimal value to the nearest integer.  We can also use a function from *math* that would do the same thing.
+What if we want to know the smallest integer greater than the value we calculate?  We could choose to round the decimal value to the nearest integer.  While this would work for display purposes, it would not for subsequent calculations that might rely on the integer value.  We can instead use a function from *math*.
 
-If floor gives us the integer just below, what function should we look to find?
+If floor gives us the greatest integer less than, what function should we look to find?
 
 *** =instructions
 - Enter *import math* in order to use the functions in this module
@@ -459,9 +465,19 @@ print(math.ceil(24/7))
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
+test_student_typed("import\s*math",not_typed_msg="Check the function module import statement for *math* module")
+
 test_function("print", index=1,
             not_called_msg = "Did you call print with floor division?",
-            incorrect_msg = "Check the values you are dividing and the operator.")
+            incorrect_msg = "Check the values you are dividing and the operator used.")
+
+test_function("print", index=2,
+            not_called_msg = "Did you print value using *floor* function from *math* module?",
+            incorrect_msg = "Check the function you provided, and the values you sent to function.")
+
+test_function("print", index=3,
+            not_called_msg = "Did you print value using smallest integer greater than function from *math* module?",
+            incorrect_msg = "Check the function you provided, and the values you sent to function.")
 
 test_function("math.floor", index=1,
             not_called_msg = "Did you call print with floor from math function?",
