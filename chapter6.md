@@ -283,7 +283,7 @@ ____ = CalcHeight()
 ```{python}
 # Complete details for CalcHeight based on instructions
 def CalcHeight (dt, dn):
-    bills = dt//dn
+    bills = dt // dn
     h = bills * .0043 * 2.54
     return h
     
@@ -298,7 +298,7 @@ height = CalcHeight(debt,den)
 
 test_student_typed('dt,\\sdn',not_typed_msg="Check parameter names for function.")
 
-test_student_typed("bills\\s\\=\\sdt\\s\\/\\/\\sdn",not_typed_msg="Check your calculation for *bills*.")
+test_student_typed("bills\\s\\=\\sdt\\s\/\/\\sdn",not_typed_msg="Check your calculation for *bills*.")
 
 test_student_typed("h\\s\\=\\sbills\\s\\*\\s\\.0043\\s\\*\\s\\2\\.54",not_typed_msg="Check your calculation for *h*.")
 
