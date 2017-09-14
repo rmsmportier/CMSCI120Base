@@ -79,29 +79,22 @@ def PrintHeight () :
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed("def\\sInputDebt\\s\\(\\)\\s:",not_typed_msg="Check your function definition for the function InputDebt")
+test_student_typed("def\s*InputDebt\s*\\(\\)\s*:",not_typed_msg="Check your function definition for the function InputDebt")
 
-test_student_typed("def\\sInputDen\\s\\(\\)\\s:",not_typed_msg="Check your function definition for the function InputDen")
+test_student_typed("def\s*InputDen\s*\\(\\)\s*:",not_typed_msg="Check your function definition for the function InputDen")
 
-test_student_typed("def\\sCalcHeight\\s\\(\\)\\s:",not_typed_msg="Check your function definition for the function CalcHeight")
+test_student_typed("def\s*CalcHeight\s*\\(\\)\s*:",not_typed_msg="Check your function definition for the function CalcHeight")
 
-test_student_typed("def\\sPrintHeight\\s\\(\\)\\s:",not_typed_msg="Check your function definition for the function PrintHeight")
+test_student_typed("def\s*PrintHeight\s*\\(\\)\s*:",not_typed_msg="Check your function definition for the function PrintHeight")
 
-test_function("print", index=1,
-            not_called_msg = "Do not remove print function.",
-            incorrect_msg = "Check instructions for the string to print")
+test_student_typed("Inside InputDebt",not_typed_msg="Check instructions for string to print in *InputDebt*")
 
-test_function("print", index=2,
-            not_called_msg = "Do not remove print function.",
-            incorrect_msg = "Check instructions for the string to print")
+test_student_typed("Inside InputDen",not_typed_msg="Check instructions for string to print in *InputDen*")
 
-test_function("print", index=3,
-            not_called_msg = "Do not remove print function.",
-            incorrect_msg = "Check instructions for the string to print")
+test_student_typed("Inside CalcHeight",not_typed_msg="Check instructions for string to print in *CalcHeight*")
 
-test_function("print", index=4,
-            not_called_msg = "Do not remove print function.",
-            incorrect_msg = "Check instructions for the string to print")
+test_student_typed("Inside PrintHeight",not_typed_msg="Check instructions for string to print in *PrintHeight*")
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:5da1240b9e
@@ -159,9 +152,9 @@ debt = InputDebt()
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed('d\\s=\\s"2376495"',not_typed_msg="Check your value assigned to *d* inside function.")
+test_student_typed('d\s*=\s*"2376495"',not_typed_msg="Check your value assigned to *d* inside function.")
 
-test_student_typed("d\\s\\=\\sint\\(debt\\)",not_typed_msg="Check your type casting function for *d* inside function.")
+test_student_typed("d\s*=\s*int\\(d\\)",not_typed_msg="Check your type casting function for *d* inside function.")
 
 test_function("InputDebt", 
             not_called_msg = "Check the function definition for *InputDebt*.",
@@ -216,7 +209,7 @@ ____ = InputDen()
 # Create function InputDen; print output indicated in instructions
 def InputDen ():
     d = "5"
-    d = int(den)
+    d = int(d)
     return d
     
 den = InputDen()
@@ -228,9 +221,9 @@ den = InputDen()
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed('d\\s=\\s"5"',not_typed_msg="Check your value assigned to *d*.")
+test_student_typed('d\s*=\s*"5"',not_typed_msg="Check your value assigned to *d*.")
 
-test_student_typed("d\\s\\=\\sint\\(d\\)",not_typed_msg="Check your type casting function for *d*")
+test_student_typed("d\s*=\s*int\\(d\\)",not_typed_msg="Check your type casting function for *d*")
 
 test_function("InputDen", 
             not_called_msg = "Check the function definition for *InputDen*.",
@@ -296,11 +289,11 @@ height = CalcHeight(debt,den)
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_student_typed('dt,\\sdn',not_typed_msg="Check parameter names for function.")
+test_student_typed('dt,\s*dn',not_typed_msg="Check parameter names for function.")
 
-test_student_typed("bills\\s\\=\\sdt\\s\/\/\\sdn",not_typed_msg="Check your calculation for *bills*.")
+test_student_typed("bills\s*=\s*dt\s*\/\/\s*dn",not_typed_msg="Check your calculation for *bills*.")
 
-test_student_typed("h\\s\\=\\sbills\\s\\*\\s\\.0043\\s\\*\\s\\2\\.54",not_typed_msg="Check your calculation for *h*.")
+test_student_typed("h\s*=\s*bills\s*\\*\s*\\.0043\s*\\*\s*2\\.54",not_typed_msg="Check your calculation for *h*.")
 
 test_function("CalcHeight", 
             not_called_msg = "Check the function definition for *CalcHeight*.",
@@ -309,4 +302,65 @@ test_function("CalcHeight",
 test_object("height",
             undefined_msg = "Did you create variable *height*?",
             incorrect_msg = "Check the syntax used to assign value to *height*, and the value returned from *CalcHeight*.")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:3715de0f86
+## Build Out Print Function
+
+Let's make the print function operational.  
+
+*** =instructions
+- Variable *height* and *den* previously created still exist in your workspace
+- Modify the function definition for *PrintHeight* to accept these values.  Call the parameters in the function definition *ht* and *dn*.
+- Complete *print()* inside *PrintHeight* to print desired output
+- Round the height printed to 2 decimal places
+- Call *PrintHeight* passing the contents of variable *height* and variable *den*.  
+
+*** =hint
+- If we are sending values to function, names to represent this need to be in function definition and in calling logic
+- Parameters are the names used inside function for values passed
+- Arguments are the names used when calling function 
+
+*** =pre_exercise_code
+```{python}
+debt = 2376495
+den = 5
+
+def CalcHeight (dt, dn):
+    bills = dt // dn
+    h = bills * .0043 * 2.54
+    return h
+    
+height = CalcHeight(debt,den)
+
+```
+
+*** =sample_code
+```{python}
+# Complete details for PrintHeight based on instructions
+def PrintHeight (____,____):
+    print("Height of $",____," bills to pay debt is ",____(____,____), " centimeters", sep='')
+
+PrintHeight(____,____)
+```
+
+*** =solution
+```{python}
+# Complete details for PrintHeight based on instructions
+def PrintHeight (ht,dn):
+    print("Height of $",dn," bills to pay debt is ",round(ht,2), " centimeters", sep='')
+
+PrintHeight(height,den)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_student_typed('"Height\s*of\s*\$",\s*dn,"\sbills to pay debt is ",round\\(ht,2\\)',not_typed_msg="Check values sent to print statement.  Be sure value for denomination prints first, and value for height second rounded to 2 decimal places.")
+
+test_function("PrintHeight", 
+            not_called_msg = "Check the function definition for *PrintHeight*.",
+            incorrect_msg = "Check requirements for details related to *PrintHeight*, and ensure you passed correct values in correct order.")
 ```
