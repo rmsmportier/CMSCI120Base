@@ -137,7 +137,7 @@ ____ = InputDebt()
 
 *** =solution
 ```{python}
-# Create function InputDebt; print output indicated in instructions
+# Complete details for InputDebt based on instructions
 def InputDebt ():
     d = "2376495"
     d = int(d)
@@ -206,7 +206,7 @@ ____ = InputDen()
 
 *** =solution
 ```{python}
-# Create function InputDen; print output indicated in instructions
+# Complete details for InputDen based on instructions
 def InputDen ():
     d = "5"
     d = int(d)
@@ -363,4 +363,136 @@ test_student_typed('"Height\s*of\s*\$",\s*dn,"\sbills to pay debt is ",round\\(h
 test_function("PrintHeight", 
             not_called_msg = "Check the function definition for *PrintHeight*.",
             incorrect_msg = "Check requirements for details related to *PrintHeight*, and ensure you passed correct values in correct order.")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:b4ab7abe30
+## Complete Program Framework
+
+Let's make our program work end to end.  We need to create *main()* function that calls each of our previous functions, in the correct order.  Results should be assigned to variables in *main*, and appropriately passed to other functions as needed.
+
+*** =instructions
+- Function definitions already exist in your workspace.  Do not change these except to set *d* in *InputDebt* to 279383283987.
+- Create function definition for *main()* function.
+- *main* needs to call *InputDebt*, saving the returned value to *debt*
+- *main* needs to call *InputDen*, saving the returned value to *den*
+- *main* needs to call *CalcHeight*, passing *debt* and *denn* as arguments, and saving the returned value to *height*
+- *main* needs to call *PrintHeight*, passing *height* and *den* as arguments
+- modify program to call *main*
+
+*** =hint
+- If we are sending values to function, names to represent this need to be in function definition and in calling logic
+- Parameters are the names used inside function for values passed
+- Arguments are the names used when calling function 
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# InputDebt has been defined for you; do not modify except to set initial value of d
+def InputDebt ():
+    d = "____"
+    d = int(d)
+    return d
+
+# InputDen has been defined for you; do not modify
+def InputDen ():
+    d = "5"
+    d = int(d)
+    return d
+
+# CalcHeight has been defined for you; do not modify    
+def CalcHeight (dt, dn):
+    bills = dt // dn
+    h = bills * .0043 * 2.54
+    return h
+    
+# PrintHeight has been defined for you; do not modify    
+def PrintHeight (ht,dn):
+    print("Height of $",dn," bills to pay debt is ",round(ht,2), " centimeters", sep='')
+
+# Define function main.  
+def ____ () ____
+# Assign results of InputDebt to variable debt
+    ____ = ____()
+# Assign results of InputDen to variable den
+    ____ = ____()
+# Call CalcHeight, pass values debt and den.  Assign results to variable height
+    ____ = ____(debt,den)
+# Call PrintHeight, pass values height and den
+    PrintHeight(____,____)
+    
+# Call main to start the program
+____()
+
+```
+
+*** =solution
+```{python}
+# Complete details for PrintHeight based on instructions
+def InputDebt ():
+    d = "279383283987"
+    d = int(d)
+    return d
+
+# InputDen has been defined for you; do not modify
+def InputDen ():
+    d = "5"
+    d = int(d)
+    return d
+
+# CalcHeight has been defined for you; do not modify    
+def CalcHeight (dt, dn):
+    bills = dt // dn
+    h = bills * .0043 * 2.54
+    return h
+    
+# PrintHeight has been defined for you; do not modify    
+def PrintHeight (ht,dn):
+    print("Height of $",dn," bills to pay debt is ",round(ht,2), " centimeters", sep='')
+
+# Define function main.  
+def main () :
+# Assign results of InputDebt to variable debt
+    debt = InputDebt()
+# Assign results of InputDen to variable den
+    den = InputDen()
+# Call CalcHeight, pass values debt and den.  Assign results to variable height
+    height = CalcHeight(debt,den)
+# Call PrintHeight, pass values height and den
+    PrintHeight(height,den)
+    
+# Call main to start the program
+main()
+
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_object("debt",
+            undefined_msg = "Did you create variable *debt*?",
+            incorrect_msg = "Check the syntax used to assign value to *debt*, and the value returned from *InputDebt*.")
+
+test_object("den",
+            undefined_msg = "Did you create variable *den*?",
+            incorrect_msg = "Check the syntax used to assign value to *den*, and the value returned from *InputDen*.")
+            
+test_object("height",
+            undefined_msg = "Did you create variable *height*?",
+            incorrect_msg = "Check the syntax used to assign value to *height*, and the value returned from *CalcHeight*.")
+
+test_function("main", 
+            not_called_msg = "Did you call function *main*?",
+            incorrect_msg = "Check order of functions to call")
+
+test_function("PrintHeight", 
+            not_called_msg = "Did you call function *PrintHeight*?",
+            incorrect_msg = "Check your variable assignments and values passed.  Print result is not correct.")
+
+
 ```
