@@ -95,6 +95,8 @@ test_student_typed("Inside CalcHeight",not_typed_msg="Check instructions for str
 
 test_student_typed("Inside PrintHeight",not_typed_msg="Check instructions for string to print in *PrintHeight*")
 
+success_msg("Good work.  We have an initial function framework.")
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:5da1240b9e
@@ -163,6 +165,9 @@ test_function("InputDebt",
 test_object("debt",
             undefined_msg = "Did you create variable *debt*?",
             incorrect_msg = "Check the syntax used to assign value to *debt*, and the value returned from *InputDebt*.")
+
+success_msg("That's it.  Now our first input function is operational.")
+
 ```
 
 
@@ -232,6 +237,10 @@ test_function("InputDen",
 test_object("den",
             undefined_msg = "Did you create variable *den*?",
             incorrect_msg = "Check the syntax used to assign value to *den*, and the value returned from *InputDen*.")
+
+success_msg("Keep it going; two input functions are now operational.")
+
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:1ef3035953
@@ -302,6 +311,10 @@ test_function("CalcHeight",
 test_object("height",
             undefined_msg = "Did you create variable *height*?",
             incorrect_msg = "Check the syntax used to assign value to *height*, and the value returned from *CalcHeight*.")
+
+success_msg("Excellent!!!  That was probably the hardest of the functions to make operational.")
+
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3715de0f86
@@ -363,6 +376,9 @@ test_student_typed('"Height\s*of\s*\$",\s*dn,"\sbills to pay debt is ",round\\(h
 test_function("PrintHeight", 
             not_called_msg = "Check the function definition for *PrintHeight*.",
             incorrect_msg = "Check requirements for details related to *PrintHeight*, and ensure you passed correct values in correct order.")
+
+success_msg("We are almost there.  We just need to pull it all together.")
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:b4ab7abe30
@@ -375,7 +391,7 @@ Let's make our program work end to end.  We need to create *main()* function tha
 - Create function definition for *main()* function.
 - *main* needs to call *InputDebt*, saving the returned value to *debt*
 - *main* needs to call *InputDen*, saving the returned value to *den*
-- *main* needs to call *CalcHeight*, passing *debt* and *denn* as arguments, and saving the returned value to *height*
+- *main* needs to call *CalcHeight*, passing *debt* and *den* as arguments, and saving the returned value to *height*
 - *main* needs to call *PrintHeight*, passing *height* and *den* as arguments
 - modify program to call *main*
 
@@ -474,25 +490,11 @@ main()
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_object("debt",
-            undefined_msg = "Did you create variable *debt*?",
-            incorrect_msg = "Check the syntax used to assign value to *debt*, and the value returned from *InputDebt*.")
-
-test_object("den",
-            undefined_msg = "Did you create variable *den*?",
-            incorrect_msg = "Check the syntax used to assign value to *den*, and the value returned from *InputDen*.")
-            
-test_object("height",
-            undefined_msg = "Did you create variable *height*?",
-            incorrect_msg = "Check the syntax used to assign value to *height*, and the value returned from *CalcHeight*.")
-
 test_function("main", 
             not_called_msg = "Did you call function *main*?",
             incorrect_msg = "Check order of functions to call")
 
-test_function("PrintHeight", 
-            not_called_msg = "Did you call function *PrintHeight*?",
-            incorrect_msg = "Check your variable assignments and values passed.  Print result is not correct.")
+success_msg("Outstanding work!!")
 
 
 ```
