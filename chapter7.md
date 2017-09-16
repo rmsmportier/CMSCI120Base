@@ -208,6 +208,12 @@ test_object("magic",
             undefined_msg = "Did you create variable *magic*?",
             incorrect_msg = "Check the instructions and make sure you are assigning correct value to *magic* based on evaluated value of *num*.")
 
+test_student_typed("if\s*num\s*==\s*0:\s*",not_typed_msg="Check syntax for equal to 0")
+
+test_student_typed("elif\s*num\s*==\s*1:\s*",not_typed_msg="Check syntax for equal to 1")
+
+test_student_typed("else:",not_typed_msg="Check syntax for condition if either of previous are not *True*")
+
 success_msg("Good work.  You re getting the hang of this.")
 
 ```
@@ -223,7 +229,7 @@ In addition to equality, comparison operators exist for
 - greater than or equal to *>=*
 - not equal to *!=*
 
-For the instructions below, select the appropriate comparison operator to use. A variable *num* has been created that can be evaluated for each conditional statement.  Evaluate the value in the order indicated in instructions.  Only one result will be *True*.
+For the instructions below, select the appropriate comparison operator to use. A variable *num* has been created that can be evaluated for each conditional statement.  Evaluate the value in the order indicated in instructions.  Only one result should be *True*.
 
 *** =instructions
 - If the value for *num* is less than 0, assign "Invalid number" to *msg*
@@ -328,17 +334,123 @@ test_object("msg",
             undefined_msg = "Did you create *msg* for each possible condition?",
             incorrect_msg = "Check the condition statements against the original instuctions.  Incorrect value for *msg*.  Only one conditional should be executed.")
 
-test_student_typed("if\s*num<\s*0:\s*",not_typed_msg="Check syntax for less than 0")
+test_student_typed("if\s*num\s*\\<\s*0:\s*",not_typed_msg="Check syntax for less than 0")
 
-test_student_typed("elif\s*num\\<\s*10:\s*",not_typed_msg="Check syntax for less than 10")
+test_student_typed("elif\s*num\s*\\<\s*10:\s*",not_typed_msg="Check syntax for less than 10")
 
-test_student_typed("if\s*num\<\\s*20:\s*",not_typed_msg="Check syntax for less than 20")
+test_student_typed("if\s*num\s*\\<\s*20:\s*",not_typed_msg="Check syntax for less than 20")
 
-test_student_typed("if\s*num\<\\s*40:\s*",not_typed_msg="Check syntax for less than 40")
+test_student_typed("if\s*num\s*\\<\s*40:\s*",not_typed_msg="Check syntax for less than 40")
 
-test_student_typed("if\s*num\<\\s*60:\s*",not_typed_msg="Check syntax for less than 60")
+test_student_typed("if\s*num\s*\\<\s*60:\s*",not_typed_msg="Check syntax for less than 60")
 
 success_msg("Excellent.  One last piece for conditionals, and you will have this mastered.")
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:81339413ce
+## Logical Operators
+
+We can now connect several logical expressions together using *and*, *or*, and *not*
+
+For the instructions below, select the appropriate logical operator to use. A variable *num1* has been created that can be evaluated for each conditional statement.  An additional variable *num2* has been created that can be evaluated along with *num1*, according to the instructions below.  Only one result should be *True*.
+
+*** =instructions
+- If the value for *num1* is less than or equal to 0, and value for *num2* is greater than 0, calculate *val* as product of *num1* and *num2*
+- If the value for *num1* is greater than 0, and value for *num2* is less than or equal to 0, calculate *val* as sum of *num1* and *num2*
+- If the value for *num1* is greater than 0, and value for *num2* is greater than 0, calculate *val* as *num1* divided by *num2*
+- Otherwise, set *val* to "No operation provided".
+
+*** =hint
+- For each condition, consider the available logical operators, and select the appropriate one
+- Remember, in a chain, there is only one *if* and at most one *else*.  Use *else* to handle the fallout from all previous conditions.
+- Make sure you created *val* with appropriate arithmetic operations for variables *num1* and *num2*
+- Print the value in *val*
+
+*** =pre_exercise_code
+```{python}
+
+num1 = 27
+num2 = -4
+
+```
+
+*** =sample_code
+```{python}
+
+# Is the value for num1 less than or equal to 0 and num2 greater than 0?
+
+____ num1 ____ 0 ____ num2 ____ 0:
+    ____ = ____ ____ ____
+
+# Is the value for num1 greater than 0 and num2 less than or equal to 0?
+
+____ num1 ____ 0 ____ num2 ____ 0:
+    ____ = ____ ____ ____
+    
+# Is the value for num1 greater than 0 and num2 greater than 0?
+
+____ num1 ____ 0 ____ num2 ____ 0:
+    ____ = ____ ____ ____
+    
+# What do we do if none of the above are True?
+
+____:
+    ____ = ____
+
+
+# Print val
+print(____)
+
+```
+
+*** =solution
+```{python}
+# Is the value for num1 less than or equal to 0 and num2 greater than 0?
+
+if num1 <= 0 and num2 > 0:
+    val = num1 * num2
+
+# Is the value for num1 greater than 0 and num2 less than or equal to 0?
+
+elif num1 > 0 and num2 <= 0:
+    val = num1 + num2
+    
+# Is the value for num1 greater than 0 and num2 greater than 0?
+
+elif num1 > 0 and num2 > 0:
+    val = num1 / num2
+    
+# What do we do if none of the above are True?
+
+else:
+    val = "No operation provided"
+
+
+# Print val
+print(val)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_object("val",
+            undefined_msg = "Did you create *val* for each possible condition?",
+            incorrect_msg = "Check the condition statements against the original instuctions.  Incorrect value for *val*.  Only one conditional should be executed.")
+
+test_student_typed("if\s*num1\s*\\<=\s*0\s*and\s*num2\s*\\>\s*0:\s*",not_typed_msg="Check syntax for num1 less than or equal to 0 and num2 greater than 0")
+
+test_student_typed("elif\s*num1\s*\\>\s*0\s*and\s*num2\s*\\<=\s*0:\s*",not_typed_msg="Check syntax for num1 greater than 0 and num2 less than or equal to 0")
+
+test_student_typed("elif\s*num1\s*\\>\s*0\s*and\s*num2\s*\\>\s*0:\s*",not_typed_msg="Check syntax for num1 greater than 0 and num2 greater than 0")
+
+test_student_typed("else:",not_typed_msg="Check syntax for what to do if none are True")
+
+
+
+success_msg("Excellent work!!!  One building block left, and you can program anything.")
 
 ```
 
