@@ -223,7 +223,7 @@ In addition to equality, comparison operators exist for
 - greater than or equal to *>=*
 - not equal to *!=*
 
-For the instructions below, select the appropriate comparison operator to use. A variable *num* has been created that can be evaluated for each conditional statement.
+For the instructions below, select the appropriate comparison operator to use. A variable *num* has been created that can be evaluated for each conditional statement.  Evaluate the value in the order indicated in instructions.  Only one result will be *True*.
 
 *** =instructions
 - If the value for *num* is less than 0, assign "Invalid number" to *msg*
@@ -326,7 +326,17 @@ print(msg)
 
 test_object("msg",
             undefined_msg = "Did you create *msg* for each possible condition?",
-            incorrect_msg = "Check the condition statements against the original instuctions")
+            incorrect_msg = "Check the condition statements against the original instuctions.  Incorrect value for *msg*.  Only one conditional should be executed.")
+
+test_student_typed("if\s*num<\s*0:\s*",not_typed_msg="Check syntax for less than 0")
+
+test_student_typed("elif\s*num\\<\s*10:\s*",not_typed_msg="Check syntax for less than 10")
+
+test_student_typed("if\s*num\<\\s*20:\s*",not_typed_msg="Check syntax for less than 20")
+
+test_student_typed("if\s*num\<\\s*40:\s*",not_typed_msg="Check syntax for less than 40")
+
+test_student_typed("if\s*num\<\\s*60:\s*",not_typed_msg="Check syntax for less than 60")
 
 success_msg("Excellent.  One last piece for conditionals, and you will have this mastered.")
 
