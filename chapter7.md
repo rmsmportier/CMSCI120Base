@@ -208,9 +208,9 @@ test_object("magic",
             undefined_msg = "Did you create variable *magic*?",
             incorrect_msg = "Check the instructions and make sure you are assigning correct value to *magic* based on evaluated value of *num*.")
 
-test_student_typed("if\s*num\s*==\s*0:\s*",not_typed_msg="Check syntax for equal to 0")
+test_student_typed("if\s*num\s*={2}\s*0\s*:",not_typed_msg="Check syntax for equal to 0")
 
-test_student_typed("elif\s*num\s*==\s*1:\s*",not_typed_msg="Check syntax for equal to 1")
+test_student_typed("elif\s*num\s*={2}\s*1\s*:",not_typed_msg="Check syntax for equal to 1")
 
 test_student_typed("else:",not_typed_msg="Check syntax for condition if either of previous are not *True*")
 
